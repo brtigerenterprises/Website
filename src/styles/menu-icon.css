@@ -1,0 +1,38 @@
+.menu-icon {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: var(--primary-color);
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary-color);
+  transition: transform 0.3s;
+}
+
+.menu-icon::before {
+  transform: translateY(-8px);
+}
+
+.menu-icon::after {
+  transform: translateY(8px);
+}
+
+.navbar-toggle.active .menu-icon {
+  background-color: transparent;
+}
+
+.navbar-toggle.active .menu-icon::before {
+  transform: rotate(45deg);
+}
+
+.navbar-toggle.active .menu-icon::after {
+  transform: rotate(-45deg);
+}
