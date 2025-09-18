@@ -49,25 +49,31 @@ const Home = () => {
       <section className="hero-section">
         <div className="hero-slider">
           {heroImages.map((img, idx) => (
-            <img
-              key={img}
-              src={img}
-              alt={`Hero ${idx + 1}`}
-              className={`hero-background${currentImage === idx ? ' active' : ''}`}
-              style={{ opacity: currentImage === idx ? 1 : 0, transition: 'opacity 1s ease' }}
+            <div
+              key={idx}
+              className={`hero-slide${currentImage === idx ? ' active' : ''}`}
+              style={{
+                backgroundImage: `url(${img})`,
+                opacity: currentImage === idx ? 1 : 0,
+                transition: 'opacity 1s ease'
+              }}
             />
           ))}
         </div>
         <div className="hero-content">
-          <h1 className="hero-title">
-            Building Dreams Into Reality
-          </h1>
-          <p className="hero-subtitle">
-            Discover premium properties in Tirupati crafted with excellence and trust
-          </p>
-          <Link to="/projects" className="btn btn-primary">
-            Explore Our Projects
-          </Link>
+          <div className="hero-text-center">
+            <h1 className="hero-title">
+              Building Dreams Into Reality
+            </h1>
+            <p className="hero-subtitle">
+              Discover premium properties in Tirupati crafted with excellence and trust
+            </p>
+            <div className="hero-button-container">
+              <Link to="/projects" className="btn btn-primary">
+                Explore Our Projects
+              </Link>
+            </div>
+          </div>
         </div>
         <div className="scroll-indicator">
           <span className="material-icons">keyboard_arrow_down</span>

@@ -1,48 +1,73 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import '../styles/footer.css';
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-primary text-white">
-      <div className="container py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Company Info */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">BR TIGER ENTERPRISES</h3>
-            <p className="text-sm text-gray-300">"Your Satisfaction is our Success"</p>
-            <p className="text-sm text-gray-300 mt-2">Proprietor: Balakrishna Puli</p>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><Link to="/" className="text-gray-300 hover:text-accent">Home</Link></li>
-              <li><Link to="/about" className="text-gray-300 hover:text-accent">About Us</Link></li>
-              <li><Link to="/projects" className="text-gray-300 hover:text-accent">Projects</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-accent">Contact</Link></li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <address className="text-gray-300 not-italic">
-              7-158, NTR Colony Part 7<br />
-              Venkatagiri, Tirupati<br />
-              Andhra Pradesh - 524132<br />
-              India
-            </address>
+    <footer className="footer">
+      <div className="footer-main">
+        <div className="footer-col about">
+          <h3>About company</h3>
+          <p>BR Tiger Enterprises provides premium properties and real estate solutions in Tirupati, crafted with excellence and trust. Our goal is to deliver quality living and investment opportunities for every client.</p>
+          <div className="footer-socials">
+            <a href="#" aria-label="Facebook" className="footer-social-icon"><i className="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter" className="footer-social-icon"><i className="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn" className="footer-social-icon"><i className="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram" className="footer-social-icon"><i className="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube" className="footer-social-icon"><i className="fab fa-youtube"></i></a>
           </div>
         </div>
-
-        {/* Copyright */}
-        <div className="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-300">
-          <p>© {currentYear} BR TIGER ENTERPRISES. All rights reserved.</p>
-          <p className="mt-1">GST Registered Company</p>
+        <div className="footer-col links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/projects">Projects</Link></li>
+            <li><Link to="/expansion">Expansion</Link></li>
+            <li><Link to="/contact">Contact Us</Link></li>
+          </ul>
+        </div>
+        <div className="footer-col more">
+          <h3>More Info</h3>
+          <ul>
+            <li>Interiors</li>
+            <li>Constructions</li>
+            <li>Renovations</li>
+            <li>Package</li>
+            <li><Link to="/contact">Contact Us</Link></li>
+            <li>Site Map</li>
+          </ul>
+        </div>
+        <div className="footer-col newsletter">
+          <h3>Subscribe to newsletter</h3>
+          <div className="footer-contact-item">
+            <span className="footer-contact-icon"><i className="fas fa-map-marker-alt"></i></span>
+            <span>7-158, NTR Colony Part 7, Tirupati, Andhra Pradesh - 524132, India</span>
+          </div>
+          <div className="footer-contact-item">
+            <span className="footer-contact-icon"><i className="fas fa-phone"></i></span>
+            <span>+91 NA</span>
+          </div>
+          <div className="footer-contact-item">
+            <span className="footer-contact-icon"><i className="fab fa-whatsapp"></i></span>
+            <span>+91 9393133331</span>
+          </div>
+          <div className="footer-contact-item">
+            <span className="footer-contact-icon"><i className="fas fa-envelope"></i></span>
+            <span>contact@brtigerenterprises.com</span>
+          </div>
+        </div>
+      </div>
+      <div className="footer-bottom">
+        <div className="footer-copyright">
+          Copyright © 2021-{currentYear} BR Tiger Enterprises. All Rights Reserved.
+        </div>
+        <div className="footer-legal-links">
+          <Link to="/privacy">Privacy Policy</Link>
+          <span className="footer-divider">|</span>
+          <Link to="/terms">Terms & Conditions</Link>
         </div>
       </div>
     </footer>
-  )
+  );
 }
