@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/home.css';
-import hero1 from '../assets/hero1.jpg';
-import hero2 from '../assets/hero2.jpg';
-import hero3 from '../assets/hero3.jpg';
-import hero4 from '../assets/hero4.jpg';
-import hero5 from '../assets/hero5.jpg';
 
-const heroImages = [hero1, hero2, hero3, hero4, hero5];
+const heroImages = [
+  '/assets/hero1.jpg',
+  '/assets/hero2.jpg',
+  '/assets/hero3.jpg',
+  '/assets/hero4.jpg',
+  '/assets/hero5.jpg'
+];
 
 const features = [
   {

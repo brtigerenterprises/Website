@@ -28,38 +28,33 @@ export default function Contact() {
       <div className="contact-hero">
         <div className="contact-hero-content">
           <h1 className="contact-hero-title">Get in Touch</h1>
-          <p className="contact-hero-text">We'd love to hear from you. Let's build something amazing together.</p>
+          <p className="contact-hero-text">Transform Your Vision into Reality with BR Tiger Enterprises</p>
         </div>
       </div>
 
       <section className="contact-section">
         <div className="contact-container">
           <div className="contact-info">
-            <h2 className="contact-title">Let's Connect</h2>
+            <h2 className="contact-title">Let's Build Together</h2>
             <p className="contact-text">
-              Have a question or want to discuss a project? We're here to help.
-              Reach out to us through any of the following methods.
+              From conceptualization to completion, we're your trusted partner in construction excellence. 
+              Whether you're looking to build your dream home, design an architectural masterpiece, 
+              or invest in prime plots, our expert team is here to guide you every step of the way.
             </p>
             <div className="contact-details">
               <div className="contact-item">
-                <div className="contact-icon">
-                  <span className="material-icons">location_on</span>
-                </div>
+                <span className="material-icons contact-icon">place</span>
                 <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="contact-link">
-                  123 Business Street, City, State 12345
+                  7-158, NTR Colony Part 7, Tirupati, Andhra Pradesh - 524132, India
                 </a>
               </div>
               <div className="contact-item">
-                <div className="contact-icon">
-                  <span className="material-icons">phone</span>
-                </div>
-                <a href="tel:+1234567890" className="contact-link">(123) 456-7890</a>
+                <span className="material-icons contact-icon">phone</span>
+                <a href="tel:+919393133331" className="contact-link">+91 9393133331</a>
               </div>
               <div className="contact-item">
-                <div className="contact-icon">
-                  <span className="material-icons">email</span>
-                </div>
-                <a href="mailto:contact@example.com" className="contact-link">contact@example.com</a>
+                <span className="material-icons contact-icon">mail</span>
+                <a href="mailto:contact@brtigerenterprises.com" className="contact-link">contact@brtigerenterprises.com</a>
               </div>
             </div>
           </div>
@@ -118,21 +113,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-
-      <div className="map-section">
-        <div className="map-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1!2d-73.9!3d40.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzAwLjAiTiA3M8KwNTQnMDAuMCJX!5e0!3m2!1sen!2sus!4v1234567890"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-        <div className="map-overlay"></div>
-      </div>
     </>
   )
 }

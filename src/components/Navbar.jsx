@@ -22,8 +22,8 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container navbar-container">
         <Link to="/" className="navbar-brand">
-          <img src="/logo.png" alt="BR Tiger Enterprises Logo" className="navbar-logo" />
-          <span className="navbar-title">BR TIGER ENTERPRISES</span>
+          <img src="/assets/logo.png" alt="BR Tiger Enterprises Logo" className="navbar-logo" />
+          <span className="navbar-title">BR TIGER<br />ENTERPRISES</span>
         </Link>
         
         <button 
@@ -45,9 +45,6 @@ const Navbar = () => {
               {item.name}
             </Link>
           ))}
-          <Link to="/contact" className="btn btn-primary">
-            Contact Us
-          </Link>
         </div>
       </div>
     </nav>
