@@ -4,9 +4,8 @@ import '../styles/navigation.css';
 
 const navigation = [
   { name: 'Home', to: '/' },
-  { name: 'About', to: '/about' },
-  { name: 'Projects', to: '/projects' },
   { name: 'Our Services', to: '/services' },
+  { name: 'About Us', to: '/about' },
   { name: 'Contact', to: '/contact' },
 ];
 
@@ -22,7 +21,15 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container navbar-container">
         <Link to="/" className="navbar-brand">
-          <img src="/logo.png" alt="BR Tiger Enterprises Logo" className="navbar-logo" />
+          <img 
+            src={import.meta.env.BASE_URL + 'assets/logo.png'} 
+            alt="BR Tiger Enterprises Logo" 
+            className="navbar-logo"
+            onError={(e) => {
+              console.error('Logo failed to load');
+              e.target.style.display = 'none';
+            }}
+          />
           <span className="navbar-title">BR TIGER ENTERPRISES</span>
         </Link>
         
@@ -45,9 +52,6 @@ const Navbar = () => {
               {item.name}
             </Link>
           ))}
-          <Link to="/contact" className="btn btn-primary">
-            Contact Us
-          </Link>
         </div>
       </div>
     </nav>
