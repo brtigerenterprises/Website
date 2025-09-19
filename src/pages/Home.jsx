@@ -6,22 +6,25 @@ import hero2 from '../assets/hero2.jpg';
 import hero3 from '../assets/hero3.jpg';
 import hero4 from '../assets/hero4.jpg';
 import hero5 from '../assets/hero5.jpg';
+import feature1 from '../assets/feature1.png';
+import feature2 from '../assets/feature2.png';
+import feature3 from '../assets/feature3.png';
 
 const heroImages = [hero1, hero2, hero3, hero4, hero5];
 
 const features = [
   {
-    icon: '/assets/feature1.png',
+    icon: feature1,
     title: 'Premium Locations',
     description: 'Strategic properties in Tirupati with excellent growth potential'
   },
   {
-    icon: '/assets/feature2.png',
+    icon: feature2,
     title: 'Quality Assurance',
     description: 'GST-registered company ensuring highest standards of construction and material quality'
   },
   {
-    icon: '/assets/feature3.png',
+    icon: feature3,
     title: 'Customer First',
     description: 'Dedicated to exceeding customer expectations with transparent dealings and timely delivery'
   }

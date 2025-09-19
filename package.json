@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://brtigerenterprises.github.io/br-tiger-enterprises/",
+  "homepage": "https://brtigerenterprises.github.io/Website/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
