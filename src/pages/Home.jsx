@@ -3,26 +3,26 @@ import { Link } from 'react-router-dom';
 import '../styles/home.css';
 
 const heroImages = [
-  '/assets/hero1.jpg',
-  '/assets/hero2.jpg',
-  '/assets/hero3.jpg',
-  '/assets/hero4.jpg',
-  '/assets/hero5.jpg'
+  'assets/hero1.jpg',
+  'assets/hero2.jpg',
+  'assets/hero3.jpg',
+  'assets/hero4.jpg',
+  'assets/hero5.jpg'
 ];
 
 const features = [
   {
-    icon: '/assets/feature1.png',
+    icon: 'assets/feature1.png',
     title: 'Premium Locations',
-    description: 'Strategic properties in Tirupati with excellent growth potential'
+    description: 'Strategic properties with excellent growth potential'
   },
   {
-    icon: '/assets/feature2.png',
+    icon: 'assets/feature2.png',
     title: 'Quality Assurance',
     description: 'GST-registered company ensuring highest standards of construction and material quality'
   },
   {
-    icon: '/assets/feature3.png',
+    icon: 'assets/feature3.png',
     title: 'Customer First',
     description: 'Dedicated to exceeding customer expectations with transparent dealings and timely delivery'
   }
@@ -48,13 +48,23 @@ const Home = () => {
     <div className="home-page">
       {/* Hero Section */}
       <section className="hero-section">
+        <button 
+          className="hero-nav prev"
+          onClick={(e) => {
+            e.preventDefault();
+            setCurrentImage((prev) => (prev - 1 + heroImages.length) % heroImages.length);
+          }}
+          aria-label="Previous slide"
+        >
+          <span className="material-icons">chevron_left</span>
+        </button>
         <div className="hero-slider">
           {heroImages.map((img, idx) => (
             <div
               key={idx}
               className={`hero-slide${currentImage === idx ? ' active' : ''}`}
               style={{
-                backgroundImage: `url(${img})`,
+                backgroundImage: `linear-gradient(rgba(0, 32, 74, 0.5), rgba(0, 0, 0, 0.3)), url(${img})`,
                 opacity: currentImage === idx ? 1 : 0,
                 transition: 'opacity 1s ease'
               }}
@@ -67,15 +77,25 @@ const Home = () => {
               Building Dreams Into Reality
             </h1>
             <p className="hero-subtitle">
-              Discover premium properties in Tirupati crafted with excellence and trust
+              Discover premium properties crafted with excellence and trust
             </p>
             <div className="hero-button-container">
-              <Link to="/projects" className="btn btn-primary">
-                Explore Our Projects
+              <Link to="/services" className="btn btn-primary">
+                Explore Our Services
               </Link>
             </div>
           </div>
         </div>
+        <button 
+          className="hero-nav next"
+          onClick={(e) => {
+            e.preventDefault();
+            setCurrentImage((prev) => (prev + 1) % heroImages.length);
+          }}
+          aria-label="Next slide"
+        >
+          <span className="material-icons">chevron_right</span>
+        </button>
         <div className="scroll-indicator">
           <span className="material-icons">keyboard_arrow_down</span>
         </div>
@@ -86,7 +106,15 @@ const Home = () => {
         <div className="features-grid">
           {features.map((feature, index) => (
             <div key={index} className="feature-card">
-              <img src={feature.icon} alt={feature.title} className="feature-icon" />
+              <img 
+                src={feature.icon} 
+                alt={feature.title} 
+                className="feature-icon" 
+                onError={(e) => {
+                  console.log(`Failed to load image: ${feature.icon}`);
+                  e.target.style.display = 'none';
+                }}
+              />
               <h3 className="feature-title">{feature.title}</h3>
               <p className="feature-description">{feature.description}</p>
             </div>
