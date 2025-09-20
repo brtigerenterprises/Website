@@ -12,17 +12,17 @@ const heroImages = [
 
 const features = [
   {
-    icon: 'assets/feature1.png',
+    icon: 'location_on',
     title: 'Premium Locations',
     description: 'Strategic properties with excellent growth potential'
   },
   {
-    icon: 'assets/feature2.png',
+    icon: 'verified',
     title: 'Quality Assurance',
     description: 'GST-registered company ensuring highest standards of construction and material quality'
   },
   {
-    icon: 'assets/feature3.png',
+    icon: 'support_agent',
     title: 'Customer First',
     description: 'Dedicated to exceeding customer expectations with transparent dealings and timely delivery'
   }
@@ -106,15 +106,9 @@ const Home = () => {
         <div className="features-grid">
           {features.map((feature, index) => (
             <div key={index} className="feature-card">
-              <img 
-                src={feature.icon} 
-                alt={feature.title} 
-                className="feature-icon" 
-                onError={(e) => {
-                  console.log(`Failed to load image: ${feature.icon}`);
-                  e.target.style.display = 'none';
-                }}
-              />
+              <div className="feature-icon">
+                <span className="material-icons">{feature.icon}</span>
+              </div>
               <h3 className="feature-title">{feature.title}</h3>
               <p className="feature-description">{feature.description}</p>
             </div>
