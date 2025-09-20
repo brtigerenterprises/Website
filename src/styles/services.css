@@ -96,22 +96,15 @@
 }
 
 .service-description {
-  color: #555;
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-  font-size: 1rem;
-  flex-grow: 1;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  display: none; /* Hide description by default */
 }
 
-.service-card-details {
-  background: #ffffff;
-  padding: 2rem;
-  transform: translateZ(0);
-  will-change: transform;
+.service-card.expanded .service-description {
+  display: block; /* Show description only when expanded */
+  color: #555;
+  margin: 1.5rem 0;
+  line-height: 1.6;
+  font-size: 1rem;
 }
 
 .service-card.expanded {
@@ -126,10 +119,18 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 768px) {
-  .service-card.expanded {
-    grid-template-columns: 1fr;
-  }
+.service-card.expanded .service-image-slider {
+  grid-column: 1;
+  margin-bottom: 1rem;
+}
+
+.service-card.expanded .service-features {
+  grid-column: 1;
+}
+
+.service-card.expanded .service-description {
+  grid-column: 2;
+  margin-top: 0;
 }
 
 .service-image-slider {

@@ -3,7 +3,6 @@
 }
 
 .contact-hero {
-  background: url('../assets/hero2.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -12,7 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: rgb(12, 11, 11);
   text-align: center;
   position: relative;
   padding: 100px 0;
@@ -32,7 +31,7 @@
     to bottom,
     rgba(0, 0, 0, 0.2) 0%,
     rgba(0, 0, 0, 0.1) 50%,
-    rgba(0, 0, 0, 0.2) 100%
+    rgba(0, 0, 0, 0.1) 100%
   );
   z-index: 1;
 }

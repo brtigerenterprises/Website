@@ -89,21 +89,6 @@ export default function Services() {
     },
     {
       id: 5,
-      title: 'Institutional Construction',
-      description: 'Creating spaces that nurture learning and healing.',
-      longDescription: 'We specialize in constructing educational institutions, healthcare facilities, and government buildings with a focus on functionality and accessibility.',
-      icon: 'school',
-      images: [
-        '/assets/institutional/institutional1.jpg',
-        '/assets/institutional/institutional2.jpg',
-        '/assets/institutional/institutional3.jpg',
-        '/assets/institutional/institutional4.jpg',
-        '/assets/institutional/institutional5.jpg'
-      ],
-      features: ['Schools', 'Hospitals', 'Government Buildings', 'Accessibility Features']
-    },
-    {
-      id: 6,
       title: 'Infrastructure Development',
       description: 'Building the foundation of progress.',
       longDescription: 'Our infrastructure projects include roads, bridges, and utility systems. We ensure durability and efficiency in every project while maintaining environmental consciousness.',
@@ -118,7 +103,7 @@ export default function Services() {
       features: ['Roads & Bridges', 'Drainage Systems', 'Utility Networks', 'Environmental Compliance']
     },
     {
-      id: 7,
+      id: 6,
       title: 'Interior Design Services',
       description: 'Transforming spaces with creative design solutions.',
       longDescription: 'Our interior design team creates stunning spaces for both residential and commercial properties, focusing on functionality, aesthetics, and client preferences.',
@@ -133,7 +118,7 @@ export default function Services() {
       features: ['Residential Design', 'Commercial Spaces', 'Custom Furniture', 'Color Consultation']
     },
     {
-      id: 8,
+      id: 7,
       title: 'Green Building Solutions',
       description: 'Sustainable construction for a better tomorrow.',
       longDescription: 'We specialize in eco-friendly construction methods and sustainable building practices to create environmentally conscious spaces.',
@@ -148,7 +133,7 @@ export default function Services() {
       features: ['Solar Integration', 'Sustainable Materials', 'Energy Efficiency', 'Water Conservation']
     },
     {
-      id: 9,
+      id: 8,
       title: 'Smart Building Systems',
       description: 'Integrating technology for modern living.',
       longDescription: 'From HVAC systems to home automation, we implement smart solutions that enhance comfort and efficiency in both residential and commercial spaces.',
@@ -163,7 +148,7 @@ export default function Services() {
       features: ['HVAC Systems', 'Home Automation', 'Security Systems', 'Energy Management']
     },
     {
-      id: 10,
+      id: 9,
       title: 'Renovation & Maintenance',
       description: 'Revitalizing spaces with modern updates.',
       longDescription: 'Our renovation and maintenance services keep your property in prime condition, from minor updates to major overhauls.',

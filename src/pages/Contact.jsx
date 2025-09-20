@@ -25,7 +25,7 @@ export default function Contact() {
 
   return (
     <>
-      <div className="contact-hero">
+      <div className="contact-hero" style={{backgroundImage: `url('/assets/getintouch.png')`}}>
         <div className="contact-hero-content">
           <h1 className="contact-hero-title">Get in Touch</h1>
           <p className="contact-hero-text">Transform Your Vision into Reality with BR Tiger Enterprises</p>
